@@ -2,4 +2,4 @@
 
 Authenticon Server Demo
 
-see wiki
+see [wiki](https://wiki.benetech.org/display/bookshare/Authenticon+Demo)
