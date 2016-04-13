@@ -2,13 +2,13 @@ package org.benetech;
 
 import java.util.HashMap;
 
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.minidev.json.JSONObject;
 
 @RestController
 public class MainController {
@@ -17,15 +17,15 @@ public class MainController {
     public @ResponseBody String sayHello(@PathVariable String token) {
 		if (token == null || token.isEmpty())
 			return "";
-		
+
 		String iconUrlAsString = new TokenToUrlMap().get(token);
 		JSONObject responseJson = new JSONObject();
 		JSONObject value = new JSONObject();
 		value.put(token, iconUrlAsString);
-		responseJson.put("tokenToIconResponse", value.toJSONString());
-		
-		return responseJson.toJSONString();
-    }
+		responseJson.put("tokenToIconResponse", value.toString());
+
+		return responseJson.toString();
+	}
 	
 	protected class TokenToUrlMap extends HashMap<String, String> {
 		
