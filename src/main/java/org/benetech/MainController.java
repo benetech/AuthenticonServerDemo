@@ -1,15 +1,14 @@
 package org.benetech;
 
 import java.util.HashMap;
-import java.util.Map;
 
+import org.json.JSONArray;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.minidev.json.JSONArray;
 
 
 @RestController
@@ -22,7 +21,7 @@ public class MainController {
 
 		String iconUrlAsString = new TokenToUrlMap().get(token);
 		JSONArray values = new JSONArray();
-		values.add(iconUrlAsString);
+		values.put(iconUrlAsString);
 
 		return values.toString();
 	}
