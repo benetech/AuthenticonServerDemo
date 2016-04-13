@@ -31,11 +31,11 @@ public class MainController {
 		private static final long serialVersionUID = 1L;
 
 		protected TokenToUrlMap() {
-			put("1", "https://design.google.com/icons/#ic_accessibility");
-			put("2", "https://design.google.com/icons/#ic_lightbulb_outline");
-			put("3", "https://design.google.com/icons/#ic_home");
-			put("4", "https://design.google.com/icons/#ic_motorcycle");
-			put("5", "https://design.google.com/icons/#ic_pregnant_woman");
+			put("1", "https://cdn2.iconfinder.com/data/icons/halloween-8/48/Black-Cat-512.png");
+//			put("2", "https://design.google.com/icons/#ic_lightbulb_outline");
+//			put("3", "https://design.google.com/icons/#ic_home");
+//			put("4", "https://design.google.com/icons/#ic_motorcycle");
+//			put("5", "https://design.google.com/icons/#ic_pregnant_woman");
 		}
 		
 		@Override
