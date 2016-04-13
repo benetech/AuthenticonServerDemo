@@ -43,7 +43,7 @@ public class MainController {
 			if (containsKey(key))
 				return super.get(key);
 			
-			return "Error, could not find Icon for token, try token 1";
+			return "Error, could not find Icon for token, try token: " + key;
 		}
 	}
 }
