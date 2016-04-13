@@ -13,8 +13,11 @@ import net.minidev.json.JSONObject;
 @RestController
 public class MainController {
 	
-	@RequestMapping(value = "/iconify/{token}", method = RequestMethod.GET)
+	@RequestMapping(value = {"", "/", "/iconify/{token}"}, method = RequestMethod.GET)
     public @ResponseBody String sayHello(@PathVariable String token) {
+		if (token == null || token.isEmpty())
+			return "";
+		
 		String iconUrlAsString = new TokenToUrlMap().get(token);
 		JSONObject responseJson = new JSONObject();
 		JSONObject value = new JSONObject();
