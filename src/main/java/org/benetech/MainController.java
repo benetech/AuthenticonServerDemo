@@ -22,6 +22,10 @@ public class MainController {
 
 		protected TokenToUrlMap() {
 			put("1", "https://design.google.com/icons/#ic_accessibility");
+			put("2", "https://design.google.com/icons/#ic_lightbulb_outline");
+			put("3", "https://design.google.com/icons/#ic_home");
+			put("4", "https://design.google.com/icons/#ic_motorcycle");
+			put("5", "https://design.google.com/icons/#ic_pregnant_woman");
 		}
 		
 		@Override

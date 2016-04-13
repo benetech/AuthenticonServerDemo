@@ -15,11 +15,17 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot' 
+apply plugin: 'war'
 
 jar {
 	baseName = 'authenticon'
 	version = '0.0.1-SNAPSHOT'
 }
+
+war {
+	war.archiveName "AuthenticonServerDemo-0.0.1.war"
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -32,7 +38,8 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.springframework.boot:spring-boot-starter-test') 
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	 
 }
 
 
