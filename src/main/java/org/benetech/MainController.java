@@ -8,12 +8,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import net.minidev.json.JSONObject;
+
 @RestController
 public class MainController {
 	
 	@RequestMapping(value = "/iconify/{token}", method = RequestMethod.GET)
     public @ResponseBody String sayHello(@PathVariable String token) {
-		return new TokenToUrlMap().get(token);
+		String iconUrlAsString = new TokenToUrlMap().get(token);
+		JSONObject responseJson = new JSONObject();
+		JSONObject value = new JSONObject();
+		value.put(token, iconUrlAsString);
+		responseJson.put("tokenToIconResponse", value.toJSONString());
+		
+		return responseJson.toJSONString();
     }
 	
 	protected class TokenToUrlMap extends HashMap<String, String> {
