@@ -1,13 +1,15 @@
 package org.benetech;
 
 import java.util.HashMap;
+import java.util.Map;
 
-import org.json.JSONObject;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import net.minidev.json.JSONArray;
 
 
 @RestController
@@ -19,12 +21,10 @@ public class MainController {
 			return "";
 
 		String iconUrlAsString = new TokenToUrlMap().get(token);
-		JSONObject responseJson = new JSONObject();
-		JSONObject value = new JSONObject();
-		value.put(token, iconUrlAsString);
-		responseJson.put("tokenToIconResponse", value.toString());
+		JSONArray values = new JSONArray();
+		values.add(iconUrlAsString);
 
-		return responseJson.toString();
+		return values.toString();
 	}
 	
 	protected class TokenToUrlMap extends HashMap<String, String> {
