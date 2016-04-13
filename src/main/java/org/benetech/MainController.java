@@ -31,11 +31,11 @@ public class MainController {
 		private static final long serialVersionUID = 1L;
 
 		protected TokenToUrlMap() {
-			put("1", "https://cdn2.iconfinder.com/data/icons/halloween-8/48/Black-Cat-512.png");
-//			put("2", "https://design.google.com/icons/#ic_lightbulb_outline");
-//			put("3", "https://design.google.com/icons/#ic_home");
-//			put("4", "https://design.google.com/icons/#ic_motorcycle");
-//			put("5", "https://design.google.com/icons/#ic_pregnant_woman");
+			put("1", "https://wiki.benetech.org/download/attachments/62652525/worddav28703aaa7c28bbdfcdafe360f7a4c0f7.png?version=1&modificationDate=1460523644099");
+			put("2", "https://wiki.benetech.org/download/attachments/62652525/worddavbea7952bab678c8d5074431fd33bc15e.png?version=1&modificationDate=1460523643611");
+			put("3", "https://wiki.benetech.org/download/attachments/62652525/worddava2c10762693dc35a19a27ef58dc9922b.png?version=1&modificationDate=1460523643990");
+			put("4", "https://wiki.benetech.org/download/attachments/62652525/worddavf573413bfb90e14c50f1ae70f9442245.png?version=1&modificationDate=1460523644009");
+			put("5", "https://wiki.benetech.org/download/attachments/62652525/worddav5be59b0e6c608d7c56d594eb9ac25992.png?version=1&modificationDate=1460523644063");
 		}
 		
 		@Override
